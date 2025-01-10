@@ -8,27 +8,110 @@ body {
   height: 100vh;
   margin: 0px;
   padding: 0px;
-
+  position: relative;
   scroll-behavior: smooth;
+}
+#page01 {
+  width: 177vh;
+  margin: auto;
 }
 svg {
   width: 100%;
   height: 100%;
+  overflow: visible;
 }
-.page {
-  height: 200%;
+
+#header {
+  position: fixed;
+  height: 16%;
+  margin-left: calc(140vh);
+
+  z-index: 1;
+  width: auto; /* Ensures no unnecessary width */
+  transition: all 0.5s ease;
+  cursor: pointer;
 }
-#taust2 {
-  scroll-behavior: smooth;
+#home {
+  position: fixed;
+  height: 4%;
+  margin-left: calc(88vh);
+  margin-top: 3vh;
+  opacity: 0.4;
+  z-index: 1;
+  width: auto; /* Ensures no unnecessary width */
+
+  cursor: pointer;
+  visibility: hidden;
+  transition: all 0.5s ease;
 }
+#home:hover {
+  position: fixed;
+  height: 4%;
+  margin-left: calc(88vh);
+  margin-top: 3vh;
+  opacity: 1;
+  z-index: 9999;
+  width: auto; /* Ensures no unnecessary width */
+
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+#down {
+  position: fixed;
+  height: 4%;
+  margin-left: calc(88vh);
+  bottom: 3vh;
+  z-index: 1;
+  width: auto; /* Ensures no unnecessary width */
+
+  cursor: pointer;
+  transition: all 0.5s ease;
+
+  animation: blink 2.5s infinite;
+  animation-fill-mode: both;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+#pointer {
+  position: absolute;
+  height: 5vh;
+  margin-left: calc(46vh);
+  margin-top: 39vh;
+  z-index: 1;
+  width: auto; /* Ensures no unnecessary width */
+  animation: flyAround 3s linear infinite;
+  transition: all 0.5s ease;
+}
+@keyframes flyAround {
+  0% {
+    transform: rotate(0deg) translateX(10px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(10px) rotate(-360deg);
+  }
+}
+
 [data-name="hover"],
 #hover {
   opacity: 0;
   transition: visibility 0s, opacity 0.2s ease;
-  curdsor: pointer;
+  cursor: pointer;
 }
 [data-name="hover"]:hover,
 #hover:hover {
   opacity: 1;
   transition: visibility 0s, opacity 0.2s ease;
+  pointer-events: auto;
 }
