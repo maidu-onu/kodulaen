@@ -92,7 +92,7 @@ svg {
 #pointer {
   position: absolute;
   height: 5vh;
-  margin-left: calc(46vh);
+  margin-left: 60vh;
   margin-top: 39vh;
   z-index: 1;
   width: auto; /* Ensures no unnecessary width */
@@ -135,7 +135,7 @@ svg {
     position: fixed;
     width: 15%;
     height: 8vw;
-    margin-left: 77vw;
+    margin-left: 75vw;
 
     z-index: 1;
     width: auto;
@@ -145,7 +145,7 @@ svg {
 
   #pointer {
     position: absolute;
-    height: 5%;
+    height: 3%;
     margin-left: 25%;
     margin-top: 25%;
     z-index: 1;
