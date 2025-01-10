@@ -5,7 +5,7 @@
 async function loadSVG(fileName, destination = "body") {
   try {
     // Fetch the SVG file
-    const response = await fetch(`SVG/${fileName}.svg`);
+    const response = await fetch(`${fileName}.svg`);
     // Convert the response to text (SVG content)
     const svgContent = await response.text();
     // Inject the SVG content into the HTML element
