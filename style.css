@@ -13,7 +13,6 @@ body {
 }
 #page01 {
   width: 177vh;
-  min-width: 500px;
   margin: auto;
 }
 svg {
@@ -26,11 +25,11 @@ svg {
   position: fixed;
   height: 16%;
   margin-left: calc(140vh);
-  min-margin-left: 100hw;
+  min-margin-left: 70hw;
 
   z-index: 1;
   width: auto; /* Ensures no unnecessary width */
-  treansition: all 0.5s ease;
+  transition: all 0.5s ease;
   cursor: pointer;
 }
 #home {
@@ -119,11 +118,21 @@ svg {
   only screen and (min--moz-device-pixel-ratio: 2),
   only screen and (-o-min-device-pixel-ratio: 2/1),
   only screen and (min-device-pixel-ratio: 2),
-  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 152dpi),
   only screen and (min-resolution: 2dppx) {
   #page01 {
-    height: 800%;
-    min-width: 500px;
+    width: 800%;
+    height: auto;
     margin: auto;
+  }
+  #header {
+    position: fixed;
+    width: 20%;
+    margin-left: calc(hw);
+
+    z-index: 1;
+    width: auto; /* Ensures no unnecessary width */
+    transition: all 0.5s ease;
+    cursor: pointer;
   }
 }
