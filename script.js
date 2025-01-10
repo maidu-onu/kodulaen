@@ -107,6 +107,7 @@ const down = function () {
 
 async function initialize() {
   try {
+    loadSVG("header", "page01");
     loadSVG("pointer", "page01");
     loadSVG("down", "page01");
     loadSVG("home", "page01");
