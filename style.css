@@ -18,7 +18,7 @@ body {
   scroll-behavior: smooth;
 }
 #page01 {
-  width: 160vh;
+  height: 800vh;
   margin: auto;
 }
 svg {
