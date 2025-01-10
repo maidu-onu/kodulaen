@@ -54,14 +54,16 @@ const scaleHeader = function () {
   let scaled = 0;
   window.addEventListener("scroll", function () {
     if (this.window.scrollY > 100 && scaled === 0) {
-      cssRuleSelector("#header", "height", `12%`);
-      cssRuleSelector("#header", "marginLeft", `calc(150vh)`);
+      cssRuleSelector("#header", "height", `10%`);
+      cssRuleSelector("#header", "marginLeft", `calc(165vh)`);
       scaled = 1;
+      console.log("tere");
     }
     if (this.window.scrollY < 10 && scaled === 1) {
       cssRuleSelector("#header", "height", `16%`);
-      cssRuleSelector("#header", "marginLeft", `calc(140vh)`);
+      cssRuleSelector("#header", "marginLeft", `calc(150vh)`);
       scaled = 0;
+      console.log("head_aega");
     }
   });
 };
@@ -107,7 +109,7 @@ const down = function () {
 
 async function initialize() {
   try {
-    loadSVG("header", "page01");
+    await loadSVG("header", "page01");
     loadSVG("pointer", "page01");
     loadSVG("down", "page01");
     loadSVG("home", "page01");

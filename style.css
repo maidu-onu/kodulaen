@@ -30,7 +30,7 @@ svg {
 #header {
   position: fixed;
   height: 16%;
-  margin-left: calc(140vh);
+  margin-left: calc(155vh);
 
   z-index: 1;
   width: auto; /* Ensures no unnecessary width */
