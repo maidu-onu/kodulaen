@@ -86,7 +86,7 @@ const downScroll = function () {
   window.addEventListener("scroll", function () {
     if (this.window.scrollY > 800 && stopper === 0) {
       cssRuleSelector("#down", "visibility", "hidden");
-      console.log("tere");
+
       stopper = 1;
     }
     if (this.window.scrollY < 10 && stopper === 1) {
