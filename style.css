@@ -13,6 +13,7 @@ body {
 }
 #page01 {
   width: 177vh;
+  min-width: 500px;
   margin: auto;
 }
 svg {
@@ -25,10 +26,11 @@ svg {
   position: fixed;
   height: 16%;
   margin-left: calc(140vh);
+  min-margin-left: 100hw;
 
   z-index: 1;
   width: auto; /* Ensures no unnecessary width */
-  transition: all 0.5s ease;
+  treansition: all 0.5s ease;
   cursor: pointer;
 }
 #home {
@@ -42,7 +44,7 @@ svg {
 
   cursor: pointer;
   visibility: hidden;
-  transition: all 0.5s ease;
+  transidtion: transform 0.5s ease;
 }
 #home:hover {
   position: fixed;
@@ -54,7 +56,6 @@ svg {
   width: auto; /* Ensures no unnecessary width */
 
   cursor: pointer;
-  transition: all 0.5s ease;
 }
 
 #down {
@@ -66,7 +67,7 @@ svg {
   width: auto; /* Ensures no unnecessary width */
 
   cursor: pointer;
-  transition: all 0.5s ease;
+  transition: animation 0.5s ease;
 
   animation: blink 2.5s infinite;
   animation-fill-mode: both;
@@ -92,7 +93,6 @@ svg {
   z-index: 1;
   width: auto; /* Ensures no unnecessary width */
   animation: flyAround 3s linear infinite;
-  transition: all 0.5s ease;
 }
 @keyframes flyAround {
   0% {
@@ -114,4 +114,16 @@ svg {
   opacity: 1;
   transition: visibility 0s, opacity 0.2s ease;
   pointer-events: auto;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (min--moz-device-pixel-ratio: 2),
+  only screen and (-o-min-device-pixel-ratio: 2/1),
+  only screen and (min-device-pixel-ratio: 2),
+  only screen and (min-resolution: 192dpi),
+  only screen and (min-resolution: 2dppx) {
+  #page01 {
+    height: 800%;
+    min-width: 500px;
+    margin: auto;
+  }
 }
