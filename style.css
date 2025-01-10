@@ -11,14 +11,14 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  height: 100vh;
+  height: 100%;
   margin: 0px;
   padding: 0px;
   position: relative;
   scroll-behavior: smooth;
 }
 #page01 {
-  width: 177vh;
+  width: 177%;
   margin: auto;
 }
 svg {
