@@ -107,9 +107,9 @@ const down = function () {
 
 async function initialize() {
   try {
-    await loadSVG("pointer", "page01");
-    await loadSVG("down", "page01");
-    await loadSVG("home", "page01");
+    loadSVG("pointer", "page01");
+    loadSVG("down", "page01");
+    loadSVG("home", "page01");
     await loadSVG("page01", "page01");
     down();
     scroll("header", "taust-00");
