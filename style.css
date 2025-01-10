@@ -121,14 +121,14 @@ svg {
   only screen and (min-resolution: 152dpi),
   only screen and (min-resolution: 2dppx) {
   #page01 {
-    width: 800%;
+    width: 100%;
     height: auto;
     margin: auto;
   }
   #header {
     position: fixed;
     width: 20%;
-    margin-left: calc(hw);
+    margin-left: calc(130hw);
 
     z-index: 1;
     width: auto; /* Ensures no unnecessary width */
