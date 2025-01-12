@@ -33,7 +33,7 @@ async function loadSVG(fileName, destination = "body") {
   }
 }
 
-//Changes CSS values
+//Changes  CSS values
 const cssRuleSelector = function (selector, property, newValue) {
   for (const sheet of document.styleSheets) {
     for (const rule of sheet.cssRules) {
@@ -69,18 +69,20 @@ const scroll = function (target, destination) {
 const scaleHeader = function () {
   let scaled = 0;
   window.addEventListener("scroll", function () {
-    console.log(window.scrollY);
     if (window.scrollY > 100 && scaled === 0) {
       cssRuleSelector("#header", "height", `10%`);
-      cssRuleSelector("#header", "marginLeft", `calc(165vh)`);
+      cssRuleSelector("#header", "transition", `all 0.5s ease`);
+      cssRuleSelector("#header", "marginLeft", `calc(50vw + 50vh)`);
       scaled = 1;
-      console.log("tere");
+    }
+    if (window.scrollY > 200 && scaled === 0) {
+      cssRuleSelector("#header", "transition", `height 0.5s ease`);
+      scaled = 1;
     }
     if (window.scrollY < 10 && scaled === 1) {
       cssRuleSelector("#header", "height", `16%`);
-      cssRuleSelector("#header", "marginLeft", `calc(150vh)`);
+      cssRuleSelector("#header", "marginLeft", `calc(50vw + 25vh)`);
       scaled = 0;
-      console.log("head_aega");
     }
   });
 };
