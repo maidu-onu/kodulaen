@@ -471,6 +471,24 @@ svg {
   }
 }
 
+#hover-13,
+#hover-14,
+#hover-15,
+#hover-16,
+#hover-17,
+#hover-18,
+#hover-19,
+#hover-20,
+#hover-21,
+#hover-22,
+#hover-23,
+#hover-24,
+#hover-25,
+#hover-26,
+#hover-27 {
+  cursor: default;
+}
+
 [data-name="hover"],
 #hover {
   opacity: 0;
