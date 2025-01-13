@@ -157,7 +157,7 @@ async function initialize() {
     scroll("hover-5", "taust-05");
     scroll("hover-6", "taust-06");
     scroll("hover-7", "taust-07");
-    //scaleHeader();
+    scaleHeader();
     homeScroll();
     downScroll();
     resize();
