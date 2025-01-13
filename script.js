@@ -135,7 +135,7 @@ const resize = function () {
     content.style.height = `${8 * viewportHeight}px`; // 800vh visible as 1/8th at once
   };
 
-  //window.addEventListener("resize", setDynamicHeight);
+  window.addEventListener("resize", setDynamicHeight);
   setDynamicHeight();
 };
 
@@ -157,7 +157,7 @@ async function initialize() {
     scroll("hover-5", "taust-05");
     scroll("hover-6", "taust-06");
     scroll("hover-7", "taust-07");
-    scaleHeader();
+    //scaleHeader();
     homeScroll();
     downScroll();
     resize();
