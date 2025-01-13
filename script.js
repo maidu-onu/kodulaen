@@ -126,6 +126,19 @@ const down = function () {
   });
 };
 
+const resize = function () {
+  const setDynamicHeight = () => {
+    const viewportHeight = window.innerHeight;
+    const content = document.querySelector("#main");
+
+    // Set height based on viewport height
+    content.style.height = `${8 * viewportHeight}px`; // 800vh visible as 1/8th at once
+  };
+
+  window.addEventListener("resize", setDynamicHeight);
+  setDynamicHeight();
+};
+
 async function initialize() {
   try {
     await loadSVG("header", "page01");
@@ -147,6 +160,7 @@ async function initialize() {
     scaleHeader();
     homeScroll();
     downScroll();
+    resize();
 
     link("hover-8", "https://www.youtube.com/watch?v=pTUBWFCaGNI");
     link(
