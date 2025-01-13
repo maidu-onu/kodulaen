@@ -129,9 +129,9 @@ const down = function () {
 const resize = function () {
   const setDynamicHeight = () => {
     const viewportHeight = window.innerHeight;
-    const content = document.querySelector("#main");
+    const content = document.querySelector("#page01");
 
-    // Set height based on viewport height
+    Set height based on viewport height
     content.style.height = `${8 * viewportHeight}px`; // 800vh visible as 1/8th at once
   };
 
