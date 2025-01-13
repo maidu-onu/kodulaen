@@ -394,7 +394,7 @@ svg {
 #header {
   position: fixed;
   height: 16%;
-  margin-left: calc(50vw + 25vh);
+  margin-left: calc(50vw + 30vh);
 
   z-index: 100;
   width: auto; /* Ensures no unnecessary width */
