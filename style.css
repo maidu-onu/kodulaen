@@ -457,7 +457,7 @@ svg {
 #pointer {
   position: absolute;
   height: 5vh;
-  margin-left: calc(51vw - 42vh);
+  margin-left: calc(51vw - 48vh);
   margin-top: 38vh;
   z-index: 1;
   width: auto; /* Ensures no unnecessary width */
