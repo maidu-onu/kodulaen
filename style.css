@@ -379,7 +379,7 @@ body {
   overflow: auto;
 }
 #page01 {
-  height: 800vh;
+  height: 800%;
 }
 svg {
   width: 100%;
