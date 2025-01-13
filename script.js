@@ -135,7 +135,7 @@ const resize = function () {
     content.style.height = `${8 * viewportHeight}px`; // 800vh visible as 1/8th at once
   };
 
-  //window.addEventListener("resize", setDynamicHeight);
+  window.addEventListener("resize", setDynamicHeight);
   setDynamicHeight();
 };
 
