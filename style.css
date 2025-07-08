@@ -369,6 +369,7 @@ html {
   width: 100%;
   margin-top: 0px;
   scroll-behavior: smooth;
+  overflow: hidden;
 }
 body {
   height: 100%;
@@ -376,11 +377,10 @@ body {
   padding: 0px;
   position: relative;
   scroll-behavior: smooth;
-  overflow: auto;
+  overflow: hidden;
 }
 #page01 {
-  height: 800%;
-  transition: all 0.5s ease;
+  height: 100vh;
 }
 svg {
   width: 100%;
@@ -391,7 +391,15 @@ svg {
 #main {
   z-index: 1;
 }
-
+.paremale {
+  text-anchor: end;
+  fill: red;
+}
+#pulk {
+  transform-origin: left;
+  transform-box: fill-box;
+  transform: scaleX(1);
+}
 #header {
   position: fixed;
   height: 16%;
@@ -418,7 +426,7 @@ svg {
 #home:hover {
   position: fixed;
   height: 4%;
-  margin-left: calc(88vh);
+  margin-left: 50vw;
   margin-top: 3vh;
   opacity: 1;
   z-index: 9999;
@@ -513,53 +521,6 @@ svg {
     width: 100%;
     height: 800vh;
     margin: auto;
-    transition: all 0.5s ease;
-  }
-  #header {
-    position: fixed;
-    width: 15%;
-    height: 8vw;
-    margin-left: 70vw;
-
-    z-index: 100;
-    width: auto;
-    transition: height 0.5s ease;
-    cursor: pointer;
-  }
-
-  #pointer {
-    position: absolute;
-    height: 4%;
-    margin-left: 20%;
-    margin-top: 20%;
-    z-index: 100;
-    width: auto; /* Ensures no unnecessary width */
-    animation: flyAround 3s linear infinite;
-  }
-  #home {
-    position: fixed;
-    height: 4%;
-    margins: auto;
-    margin-top: 3vh;
-    opacity: 0.4;
-    z-index: 100;
-
-    cursor: pointer;
-    transidtion: transform 0.5s ease;
-  }
-
-  #down {
-    position: fixed;
-    height: 4%;
-    margins: auto;
-    bottom: 3vh;
-    z-index: 1;
-    width: auto; /* Ensures no unnecessary width */
-
-    cursor: pointer;
-    transition: animation 0.5s ease;
-
-    animation: blink 2.5s infinite;
-    animation-fill-mode: both;
+    //transition: all 0.5s ease;
   }
 }
