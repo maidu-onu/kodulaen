@@ -73,11 +73,13 @@ const uuenda = function () {
       new Date().getMonth()) /
       360) *
     100;
+
   const protsent = document.querySelector("#protsent tspan");
   protsent.classList.add("paremale");
-  protsent.textContent = `${pross.toFixed(2)} %`;
+  protsent.textContent = `${(Math.round(pross * 100) / 100).toLocaleString(
+    "et-EE"
+  )} %`;
   const pulk = document.querySelector("#pulk");
-  pross = 10;
   pulk.style.transform = `scaleX(${pross / 100})`;
   document.querySelector("#pulk rect").classList.add("paremale");
   if (pross > 99.99) protsent.textContent = `Kõik on`;
