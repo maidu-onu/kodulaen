@@ -255,18 +255,6 @@ legend {
  * Add the correct vertical alignment in Chrome, Firefox, and Opera.
  */
 
-progress {
-  vertical-align: baseline;
-}
-
-/**
- * Remove the default vertical scrollbar in IE 10+.
- */
-
-textarea {
-  overflow: auto;
-}
-
 /**
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
@@ -391,6 +379,18 @@ svg {
 #main {
   z-index: 1;
 }
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+
+textarea {
+  overflow: auto;
+}
+
 .paremale {
   text-anchor: end;
   fill: red;
