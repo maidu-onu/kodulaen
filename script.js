@@ -36,10 +36,15 @@ async function loadSVG(fileName, destination = "body") {
 //Changes  CSS values
 const cssRuleSelector = function (selector, property, newValue) {
   for (const sheet of document.styleSheets) {
-    for (const rule of sheet.cssRules) {
-      if (rule.selectorText === selector) {
-        rule.style[property] = newValue;
+    try {
+      for (const rule of sheet.cssRules) {
+        if (rule.selectorText === selector) {
+          rule.style[property] = newValue;
+        }
       }
+    } catch (e) {
+      // Skip stylesheets that are not accessible due to CORS
+      if (e.name !== "SecurityError") throw e;
     }
   }
 };
@@ -67,10 +72,7 @@ const resize = function () {
 const uuenda = function () {
   let pross;
   pross =
-    ((360 -
-      (2053 - new Date().getFullYear()) * 12 +
-      2 -
-      new Date().getMonth()) /
+    (((new Date().getFullYear() - 2024) * 12 + 2 + new Date().getMonth() + 1) /
       360) *
     100;
 
@@ -80,9 +82,13 @@ const uuenda = function () {
     "et-EE"
   )} %`;
   const pulk = document.querySelector("#pulk");
+  if (pross > 99.99) {
+    pross = 100;
+    protsent.textContent = `Kõik on`;
+  }
   pulk.style.transform = `scaleX(${pross / 100})`;
   document.querySelector("#pulk rect").classList.add("paremale");
-  if (pross > 99.99) protsent.textContent = `Kõik on`;
+
   function valueToColor(value) {
     value = Math.max(0, Math.min(100, value)); // clamp to [0, 100]
 
